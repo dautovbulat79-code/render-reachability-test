@@ -1,0 +1,9 @@
+# Render Blueprint: one free web service, no dependencies, no database.
+services:
+  - type: web
+    name: reachability-test
+    runtime: python
+    plan: free
+    buildCommand: "python --version"
+    startCommand: "python server.py"
+    healthCheckPath: /health
